@@ -18,10 +18,16 @@ export function TaskList() {
     const random = Math.random() * 10000
     const idNumber = random.toFixed(0)
 
+    
+
     const newTask: Task = {
       id: parseInt(idNumber),
       title: newTaskTitle,
       isComplete: false
+    }
+
+    if(!newTask.title){
+      return
     }
 
     setTasks([...tasks, newTask])
